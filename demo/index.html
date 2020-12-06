@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>Embed Form</title>
+</head>
+<body>
+    <div style="text-align: center;">
+        <h1>This is a page to embed our form widget</h1>
+        <p>The purpose of this page is to make sure that our form widget is embedabble and working as expected!</p>
+        <h2 style="margin-bottom: 30px;">Below is the embedded form using a script tag</h2>
+    </div>
+        <script>
+            (function (w,d,s,o,f,js,fjs) {
+                w['Form-Widget']=o;w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) };
+                js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];
+                js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs);
+            }(window, document, 'script', 'fw', './widget.js'));
+            fw('init', { someConfiguration: 'Test configs in the Console' });
+            fw('form');
+        </script>
+</body>
+</html>

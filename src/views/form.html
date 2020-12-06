@@ -1,0 +1,53 @@
+<!-- ========== Widget Start ========== -->
+
+    <!-- ========== Form Start ========== -->
+    <form class="form-widget" action="#">
+
+        <!-- === Conact Person drop down selector === -->
+        <div class="form-group">
+            <label class="form-widget__label">Contact Person<span class="form-widget__label--required"> (required)</span>:
+                <select class="form-widget__field input-contact-list" required>
+                    <option hidden disabled selected value> -- select a contact person -- </option>
+                </select>
+            </label>
+        </div>
+        
+        <!-- === Date field assigned by the simple and easy https://www.npmjs.com/package/js-datepicker in render-form.js === -->
+        <div class="form-group">
+            <label class="form-widget__label" >Date<span class="form-widget__label--required"> (required)</span>:
+                <input class="form-widget__field input-datepicker" type="text" required placeholder="Thu Dec 10 2025">
+            </label>
+        </div> 
+
+        <!-- === Comments field === -->
+        <div class="form-group">
+            <label class="form-widget__label">Comments<span class="form-widget__label--required"> (optional)</span>:
+                <textarea class="form-widget__field input-comment" maxlength="250" placeholder="Add your comments. Maximum 250 characters!"></textarea>
+            </label>
+        </div>  
+
+        <!-- === Submit form button === -->
+        <div class="form-group">
+            <button class="form-widget__submit">Submit</button>
+        </div>
+
+    </form> 
+    <!-- ========== Form End ========== -->
+
+    <!-- ========== Modal Start ========== -->
+    <div class="modal hidden">
+
+        <!-- === Modal close button === -->
+        <button class="modal__close">&times;</button>
+        
+        <h4 class="modal__heading">Submitted data</h4>
+
+        <!-- === Modal content taken from form fields and appended here in form-functionality.js === -->
+        <div class="modal__form-data"></div>
+
+    </div>
+
+    <div class="overlay hidden"></div>
+    <!-- ========== Modal End ========== -->
+
+<!-- ========== Widget End ========== -->

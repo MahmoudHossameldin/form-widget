@@ -1,0 +1,144 @@
+/* Color variables */
+:root{
+    --color-form-label: #1e1c1c;
+    --color-button-hover: #b0a0a0;
+}
+/* The hidden class */
+.hidden{
+    display: none;
+}
+
+/* ============================== Form Styles ============================== */
+.form-widget{
+    /* Defaults for our widget */
+    font-weight: 400;
+    line-height: 1.6;
+    /* Responsive design based on embeding site's font size*/
+    font-size: .875em;
+
+    display: block;
+    min-width: 200px;
+    padding-left: 1em;
+    padding-right: 1em;
+    border: solid 1px #000;
+    border-radius: 2px;
+    margin: 0 auto;
+}
+.form-group:not(:last-child){
+    margin-bottom: 1.5625em;
+}
+.form-group:last-child{
+    margin-bottom: .5em;
+}
+.form-widget__label{
+    font-weight: 700;
+    color: var(--color-form-label);
+    cursor: pointer;
+}
+.form-widget__label--required{
+    font-size: .857em;
+    font-weight: 400;
+}
+.form-widget__field{
+    display: block;
+    margin-top: 1px;
+    width: 100%;
+}
+.form-widget__submit{
+    border: none;
+    outline: 0;
+    padding: 1em;
+    background-color: #00963f;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    width: 100%;
+/* start of button hover effect */    
+    background-image: linear-gradient(120deg, transparent 0%, transparent 50%, var(--color-button-hover) 50%);
+    background-size: 220%;
+    transition: all .4s;
+}
+.form-widget__submit:hover{
+    background-position: 100%;
+}
+/* end of button hover effect */
+.input-contact-list{
+    cursor: pointer;
+    height: 25px;
+}
+.input-datepicker{
+    height: 25px;
+}
+.input-comment{
+    min-height: 100px;
+}
+
+/* ============================== Modal Styles ============================== */
+.relative-container{
+    position: relative;
+}
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+  
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 5px;
+    box-shadow: 0 3em 5em rgba(0, 0, 0, 0.3);
+    z-index: 10;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    z-index: 5;
+  }
+  .modal__heading {
+    font-size: 2em;
+    margin: 0 0 2em;
+  }
+  .modal__close{
+    position: absolute;
+    top: 0;
+    right: .5em;
+    font-size: 5em;
+    color: #333;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+.modal__form-data{
+    font-size: 1.5em;
+}
+.modal__label{
+    font-weight: 700;
+    line-height: 2;
+}
+.value-comment{
+    display: block;
+}
+
+
+/*Responsive form widget ( set maximum width = 600px \\Mobiles responsiveness comes from form min-width and inputs width:100%) */
+@media screen and (min-width: 600px) {
+    .form-widget{
+        max-width: calc(600px - 2em);
+    }
+}
+
+/* Responsive Typography */
+@media screen and (min-width: 768px) {
+    .form-widget{
+        font-size: 1em;
+    }
+    .form-widget__label--required{
+        font-size: .857em;
+    }
+}
